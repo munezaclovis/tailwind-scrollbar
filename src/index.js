@@ -41,7 +41,5 @@ module.exports = plugin(tailwind => {
     )
   );
 
-  if (tailwind.config('mode') === 'jit') {
-    tailwind.addVariant('hover', scrollbarAwareHover(tailwind.e));
-  }
+  tailwind.addVariant('hover', scrollbarAwareHover(tailwind.e));
 });
