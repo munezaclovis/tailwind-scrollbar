@@ -60,7 +60,7 @@ const SCROLLBAR_SIZE_BASE = {
   // Make sure the scrollbars are calculated in the elements width
   // NOTE: only has effect in webkit-based browsers, but is only really needed
   // in webkit-based browsers in the first place.
-  overflow: 'overlay',
+  overflow: 'auto',
 
   // Prevent the plugin from overriding overflow-hidden
   '&.overflow-x-hidden': {
@@ -109,7 +109,8 @@ const SCROLLBAR_SIZE_UTILITIES = {
     'scrollbar-width': 'none',
 
     '&::-webkit-scrollbar': {
-      display: 'none'
+      width: '0',
+      height: '0'
     }
   }
 };
